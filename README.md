@@ -49,4 +49,4 @@ Details for every step are in `CLAUDE.md` and `docs/ASSETS.md`.
 ## Credits
 
 ULTRAKILL is made by Arsi "Hakita" Patala and published by New Blood Interactive; all ULTRAKILL assets and designs
-are theirs. Mod code by Oleksandr (GitHub: Rand0mNme), written with the help of Claude (an AI assistant).
+are theirs. Mod code by YaOlexandr (GitHub: Rand0mNme), written with the help of Claude (an AI assistant).
