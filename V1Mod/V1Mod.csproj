@@ -1,0 +1,76 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <AssemblyName>V1Mod</AssemblyName>
+    <RootNamespace>V1Mod</RootNamespace>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <!-- game folder and r2modman profile -->
+    <GameDir>D:\Games\steamapps\common\Risk of Rain 2</GameDir>
+    <ManagedDir>$(GameDir)\Risk of Rain 2_Data\Managed</ManagedDir>
+    <R2ProfileDir>$(APPDATA)\r2modmanPlus-local\RiskOfRain2\profiles\V1 Dev</R2ProfileDir>
+    <PluginsDir>$(R2ProfileDir)\BepInEx\plugins</PluginsDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="nuget.config" />
+  </ItemGroup>
+
+  <!--
+    The HenryTutorial template pulls these libraries from nuget.bepinex.dev, but that server doesn't serve the files.
+    So we reference the same dlls straight from the installed game and the r2modman profile.
+  -->
+  <ItemGroup>
+    <Reference Include="$(ManagedDir)\RoR2.dll" Private="false" />
+    <Reference Include="$(ManagedDir)\UnityEngine.dll" Private="false" />
+    <Reference Include="$(ManagedDir)\UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="$(ManagedDir)\UnityEngine.PhysicsModule.dll" Private="false" />
+    <Reference Include="$(ManagedDir)\UnityEngine.AudioModule.dll" Private="false" />
+    <Reference Include="$(ManagedDir)\UnityEngine.AssetBundleModule.dll" Private="false" />
+    <Reference Include="$(ManagedDir)\UnityEngine.AnimationModule.dll" Private="false" />
+    <Reference Include="$(ManagedDir)\UnityEngine.ParticleSystemModule.dll" Private="false" />
+    <Reference Include="$(ManagedDir)\UnityEngine.UI.dll" Private="false" />
+    <Reference Include="$(ManagedDir)\UnityEngine.UIModule.dll" Private="false" />
+    <Reference Include="$(ManagedDir)\UnityEngine.TextRenderingModule.dll" Private="false" />
+    <Reference Include="$(ManagedDir)\Rewired_Core.dll" Private="false" />
+    <Reference Include="$(ManagedDir)\UnityEngine.UnityWebRequestModule.dll" Private="false" />
+    <Reference Include="$(ManagedDir)\UnityEngine.UnityWebRequestAudioModule.dll" Private="false" />
+    <Reference Include="$(ManagedDir)\Unity.Addressables.dll" Private="false" />
+    <Reference Include="$(ManagedDir)\Unity.ResourceManager.dll" Private="false" />
+    <Reference Include="$(ManagedDir)\LegacyResourcesAPI.dll" Private="false" />
+    <Reference Include="$(ManagedDir)\HGCSharpUtils.dll" Private="false" />
+    <Reference Include="$(ManagedDir)\HGUnityUtils.dll" Private="false" />
+    <Reference Include="$(ManagedDir)\KinematicCharacterController.dll" Private="false" />
+    <Reference Include="$(ManagedDir)\com.unity.multiplayer-hlapi.Runtime.dll" Private="false" />
+    <Reference Include="$(R2ProfileDir)\BepInEx\core\BepInEx.dll" Private="false" />
+    <Reference Include="$(R2ProfileDir)\BepInEx\core\0Harmony.dll" Private="false" />
+    <Reference Include="$(PluginsDir)\RiskofThunder-R2API_*\**\R2API.*.dll" Private="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SoundFiles Include="Assets\Sounds\*.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NAudio.Core" Version="2.2.1" />
+    <PackageReference Include="NAudio.WinMM" Version="2.2.1" />
+  </ItemGroup>
+
+  <!-- after build: copy the dll into the Build folder and into the r2modman profile -->
+  <Target Name="CopyToProfile" AfterTargets="Build">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ProjectDir)..\Build\plugins" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(PluginsDir)\Oleksandr-V1Mod" Condition="Exists('$(PluginsDir)')" />
+    <ItemGroup>
+      <LibFiles Include="$(OutDir)NAudio*.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(LibFiles)" DestinationFolder="$(ProjectDir)..\Build\plugins" />
+    <Copy SourceFiles="@(LibFiles)" DestinationFolder="$(PluginsDir)\Oleksandr-V1Mod" Condition="Exists('$(PluginsDir)')" />
+  <!-- the asset bundle is built in the V1Unity Unity project (Assets/Editor/BuildV1.cs) -->
+    <Copy SourceFiles="$(ProjectDir)..\V1Unity\AssetBundles\v1assets" DestinationFolder="$(ProjectDir)..\Build\plugins" Condition="Exists('$(ProjectDir)..\V1Unity\AssetBundles\v1assets')" />
+    <Copy SourceFiles="$(ProjectDir)..\V1Unity\AssetBundles\v1assets" DestinationFolder="$(PluginsDir)\Oleksandr-V1Mod" Condition="Exists('$(PluginsDir)') And Exists('$(ProjectDir)..\V1Unity\AssetBundles\v1assets')" />
+    <Copy SourceFiles="@(SoundFiles)" DestinationFolder="$(ProjectDir)..\Build\plugins\Sounds" />
+    <Copy SourceFiles="@(SoundFiles)" DestinationFolder="$(PluginsDir)\Oleksandr-V1Mod\Sounds" Condition="Exists('$(PluginsDir)')" />
+  </Target>
+
+</Project>

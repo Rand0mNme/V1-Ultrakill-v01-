@@ -1,0 +1,142 @@
+Additive_0	ULTRAKILL/Legacy Shaders/Particles/Additive
+BatteryFull	psx/unlit/ambient
+BloodDrop	psx/unlit/alphatest/nocull
+Explosion	ULTRAKILL/Master
+FriendlyBullet	ULTRAKILL/Master
+HeatSinkTest_New	ULTRAKILL/Master
+InvisibleFace	Hidden/ProBuilder/HideVertices
+MainArmLit	ULTRAKILL/Master
+InvisibleFace	Hidden/ProBuilder/HideVertices
+Pistol New CustomColor	ULTRAKILL/Master
+Pistol New	ULTRAKILL/Master
+Projectile	ULTRAKILL/Master
+Screenmaterial_1	psx/unlit/unlit
+Shotgun New CustomColor	ULTRAKILL/Master
+Shotgun New	ULTRAKILL/Master
+SkullEffect	ULTRAKILL/Master
+Smoke	ULTRAKILL/Master
+Smoke2	ULTRAKILL/Legacy Shaders/Particles/Multiply (Double)
+White	ULTRAKILL/Particles/Standard Unlit
+White2	psx/unlit/unlit
+Alpha Blended	
+Chainsaw	ULTRAKILL/Master
+ChainsawBladeMotion	ULTRAKILL/Master
+ChainsawBrokenLit	ULTRAKILL/Master
+ChainsawLit	ULTRAKILL/Master
+ChainsawLitBlade	ULTRAKILL/Master
+ChainsawLitBladeMotion	ULTRAKILL/Master
+Charge	
+ExplosionShockwave	
+Gradient	
+HeatSinkHeat	
+Metal Decoration 2B	ULTRAKILL/Master
+New Material_0	
+Sawblade_0	psx/unlit/transparent/nocull
+Wall	ULTRAKILL/Master
+WallUnlit	ULTRAKILL/Master
+BarrelHeat	ULTRAKILL/Master
+Explosion 2	ULTRAKILL/Master
+Floor_1	ULTRAKILL/Master
+Lightning1	
+Nailgun 1	psx/vertexlit/vertexlit
+Nailgun New CustomColor	ULTRAKILL/Master
+Nailgun New	ULTRAKILL/Master
+VCR_OSD_MONO_1 Material	TextMeshPro/Distance Field
+vcr-osd-replayed Atlas Material	TextMeshPro/Distance Field
+ChargeEnemy	
+GlowLine16	
+M_Railcannon CustomColor	ULTRAKILL/Master
+M_Railcannon	ULTRAKILL/Master
+M_RailcannonHarpoon	ULTRAKILL/Master
+M_RailcannonMalicious	ULTRAKILL/Master
+Muzzleflash	
+Skull Green	psx/unlit/ambient
+scorpionboss 3	psx/unlit/ambient
+AltarUnlitRed_0	ULTRAKILL/Master
+Basic Color - Dark Grey	ULTRAKILL/Master
+BloodDropMult	
+Gasoline	psx/unlit/transparent/zwrite-fresnel
+Muzzleflash 1	ULTRAKILL/Sprites/Default
+Projectile 2	ULTRAKILL/Master
+RageEffect 2	ULTRAKILL/Sprites/Default
+RocketLauncher	ULTRAKILL/Master
+RocketLauncherCustom	ULTRAKILL/Master
+UI-Premult	UI/Default_UK
+Coin	psx/vertexlit/vertexlit
+CoinUnlit	psx/unlit/ambient
+Arm	ULTRAKILL/Master
+ExplosionShockwave 3	
+FeedbackerLit	ULTRAKILL/Master
+RedArmLit	ULTRAKILL/Master
+GreenArm	ULTRAKILL/Master
+WhiplashWire	ULTRAKILL/Master
+Spark 1	
+FinalDoorOff 7	ULTRAKILL/Master
+FinalDoorOff 8	ULTRAKILL/Master
+FinalDoorOff 9	ULTRAKILL/Master
+ImpactHammerUnlit	ULTRAKILL/Master
+ImpactHammerUnlitCustom	ULTRAKILL/Master
+ImpactHammerUnlitDial	ULTRAKILL/Master
+KeyboardLowRes	ULTRAKILL/Master
+M_HeatSinkHeat	
+M_HeatSinkHeat_0	
+M_HeatSinkTest	
+M_HeatSinkTest_0	
+M_Railcannon Unlit CustomColor	ULTRAKILL/Master
+M_Railcannon Unlit	ULTRAKILL/Master
+M_ShopTerminal	ULTRAKILL/Master
+MinosRevolver Unlit CustomColor	ULTRAKILL/Master
+MinosRevolver Unlit	ULTRAKILL/Master
+Nailgun New Unlit CustomColor	ULTRAKILL/Master
+Nailgun New Unlit	ULTRAKILL/Master
+Pistol New Unlit CustomColor	ULTRAKILL/Master
+Pistol New Unlit	ULTRAKILL/Master
+RightArm.001	
+RightArm_001_0	
+RocketLauncher Unlit CustomColor	ULTRAKILL/Master
+RocketLauncher Unlit	ULTRAKILL/Master
+Sawblade Unlit CustomColor	ULTRAKILL/Master
+Sawblade Unlit	ULTRAKILL/Master
+SawbladeLauncher Unlit CustomColor	ULTRAKILL/Master
+SawbladeLauncher Unlit	ULTRAKILL/Master
+ShopScreen	ULTRAKILL/Master
+Shotgun New Unlit CustomColor	ULTRAKILL/Master
+Shotgun New Unlit	ULTRAKILL/Master
+VCR_OSD_MONO_1 Material_0	TextMeshPro/Distance Field
+WickedNoise	ULTRAKILL/WickedUI
+fs-tahoma-8px Atlas Material	TextMeshPro/Distance Field
+fs-tahoma-8px underlay	TextMeshPro/Distance Field
+fs-tahoma-8px-v2 Atlas Material	TextMeshPro/Distance Field
+Black_0	ULTRAKILL/Master
+FinalDoor 3	ULTRAKILL/Master
+FinalDoorOff 1	ULTRAKILL/Master
+FinalDoorOff 2	ULTRAKILL/Master
+FinalDoorOff 3	ULTRAKILL/Master
+FinalDoorOff	ULTRAKILL/Master
+FinalFrameL 1	ULTRAKILL/Master
+FinalFrameL 2	ULTRAKILL/Master
+FinalFrameL 3	ULTRAKILL/Master
+FinalFrameLB	ULTRAKILL/Master
+FinalFrameT 2	ULTRAKILL/Master
+FinalFrameT 3	ULTRAKILL/Master
+FinalFrameTB	ULTRAKILL/Master
+Metal Decoration 18	ULTRAKILL/Master
+Metal Decoration 19	ULTRAKILL/Master
+Metal Decoration 2	ULTRAKILL/Master
+Metal Decoration 20	ULTRAKILL/Master
+Metal Decoration 21	ULTRAKILL/Master
+Metal Decoration 2C	ULTRAKILL/Master
+Trigger	ULTRAKILL/Master
+TriggerEnemy	ULTRAKILL/Master
+BarrelHeat 1	ULTRAKILL/Master
+Sawblade CustomColor	ULTRAKILL/Master
+Sawblade	ULTRAKILL/Master
+Sawblade1	psx/unlit/transparent/nocull
+Sawblade2	psx/unlit/transparent/nocull
+SawbladeCenter	psx/unlit/unlit
+SawbladeCenter1	psx/unlit/unlit
+SawbladeCenter2	psx/unlit/unlit
+SawbladeLauncher CustomColor	ULTRAKILL/Master
+SawbladeLauncher	ULTRAKILL/Master
+ExplosionShockwave 6	psx/vertexlit/transparent/zwrite
+ULTRAKILL Sprites-Default	ULTRAKILL/Master
