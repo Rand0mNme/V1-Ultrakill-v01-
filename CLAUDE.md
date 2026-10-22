@@ -93,8 +93,10 @@ the game's `Managed` folder and the profile, because nuget.bepinex.dev doesn't s
 
 1. Set the paths: `GameDir` and `R2ProfileDir` at the top of `V1Mod/V1Mod.csproj` (same in `V1Test` and `V1Diag`),
    or pass them on the command line: `dotnet build -c Release -p:GameDir="C:\...\Risk of Rain 2" -p:R2ProfileDir="C:\...\profiles\MyProfile"`.
-2. Build the asset bundle and sounds (`docs/ASSETS.md`). The mod build picks up `V1Unity/AssetBundles/v1assets` and
-   `V1Mod/Assets/Sounds/*.wav` automatically if they exist.
+2. Build the asset bundle and sounds with `tools/build_assets.sh` (run `bash tools/build_assets.sh --help`; it needs the
+   ULTRAKILL folder, AssetRipper 2.x and Unity 2021.3.x, and does every step in `docs/ASSETS.md` automatically).
+   It was verified on a fresh clone: it reproduces the original bundle exactly (same asset list, same build log) and the
+   mod built from it runs. The mod build picks up `V1Unity/AssetBundles/v1assets` and `V1Mod/Assets/Sounds/*.wav`.
 3. `cd V1Mod && dotnet build -c Release`. Output goes to `Build/plugins` and to
    `<profile>/BepInEx/plugins/Oleksandr-V1Mod` (dll, NAudio dlls, `v1assets`, `Sounds/`). The copy fails while the
    game is running, because the game locks the files.

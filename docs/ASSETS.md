@@ -6,7 +6,16 @@ The mod loads two things that come from ULTRAKILL and are therefore not in this 
    booth, the crosshair, style rank sprites and weapon icons.
 2. `Sounds/*.wav`: ULTRAKILL sound clips converted to 16-bit 44.1 kHz stereo WAV.
 
-Both have to be made from your own ULTRAKILL install. The pipeline below is what was used for this mod.
+Both have to be made from your own ULTRAKILL install. **`tools/build_assets.sh` does all of it in one go**
+(AssetRipper export, asset copy, scene cut-outs, sound conversion with `tools/sounds.tsv`, Unity build):
+
+```
+bash tools/build_assets.sh --ultrakill "D:/SteamLibrary/steamapps/common/ULTRAKILL" \
+  --assetripper "C:/Tools/AssetRipper/AssetRipper.GUI.Free.exe" \
+  --unity "C:/Program Files/Unity/Hub/Editor/2021.3.33f1/Editor/Unity.exe"
+```
+
+The sections below explain what the script does, for when something needs to be changed or fixed by hand.
 
 ## 1. Export ULTRAKILL with AssetRipper
 
@@ -50,9 +59,14 @@ All `.prefab` entries above are listed with their output names in the `Prefabs` 
 Three pieces are not standalone prefabs in the export and were cut out of scenes/prefabs with `tools/UkScene`
 (`UkScene <file> <guidmap.txt> extract <rootTransformId> <out.prefab>`; `show`/`refs`/`tree` help find the ids):
 
-- `Assets/UK/V1FirstRoomRoom.prefab`: the "Room" branch of the FirstRoom prefab (keeps ProBuilder meshes, colliders, lights).
-- `Assets/UK/_V1WhiplashArm.prefab`: the Whiplash arm model from the player's hierarchy.
-- `Assets/V1/UI/UKCrosshair.prefab`: `Player/Canvas/Crosshair Filler/Crosshair` from a level scene.
+- `Assets/UK/V1FirstRoomRoom.prefab`: the "Room" branch of `FirstRoom.prefab`, root transform id `4145039172186485`
+  (keeps ProBuilder meshes, colliders, lights).
+- `Assets/UK/_V1WhiplashArm.prefab`: the Whiplash arm model from `FirstRoom Encore.prefab`, root id `4077724941760488`.
+- `Assets/V1/UI/UKCrosshair.prefab`: `Player/Canvas/Crosshair Filler/Crosshair` from scene
+  `005a4f2ce549277458596ee0f0d6e88c.unity`, root RectTransform id `24705`.
+
+These ids are from the October 2026 ULTRAKILL build. If a future build changes them, `build_assets.sh` stops with a
+message; find the new ids with `UkScene <file> <guidmap.txt> tree <id>` / `show` and update the `extract` lines.
 
 `guidmap.txt` (guid -> file path for the export) is written by `UkDeps` next to its binary.
 

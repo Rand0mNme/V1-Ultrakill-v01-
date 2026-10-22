@@ -17,3 +17,5 @@ V1Unity/Temp/
 V1Unity/Logs/
 V1Unity/UserSettings/
 _reference/
+_export/
+tools/*/out/

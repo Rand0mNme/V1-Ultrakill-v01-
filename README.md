@@ -41,7 +41,9 @@ Screenshots are in `docs/screenshots/`.
 
 1. Install Risk of Rain 2 with BepInEx and R2API through r2modman (Core, Prefab, Language, ContentManagement, DamageType).
 2. Edit `GameDir` and `R2ProfileDir` at the top of `V1Mod/V1Mod.csproj` (or pass `-p:GameDir=... -p:R2ProfileDir=...`).
-3. Export ULTRAKILL assets and build the asset bundle with Unity 2021.3 (see `docs/ASSETS.md`).
+3. Build the models and sounds from your ULTRAKILL install with one script (needs Unity 2021.3 and AssetRipper 2.x,
+   about half an hour the first time):
+   `bash tools/build_assets.sh --ultrakill "<ULTRAKILL folder>" --assetripper "<AssetRipper.GUI.Free.exe>" --unity "<Unity.exe>"`
 4. `dotnet build -c Release` in `V1Mod`. The build copies the dll, NAudio, the bundle and the sounds into
    `<profile>/BepInEx/plugins/Oleksandr-V1Mod`.
 
