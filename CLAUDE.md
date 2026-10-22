@@ -53,6 +53,7 @@ tools/                     UkDeps (copy an exported asset with its dependencies)
                            exported scenes and prefabs), OggToWav (sound conversion), v1test.sh, addshadermap.sh
 docs/ULTRAKILL_values.md   numbers extracted from ULTRAKILL (movement, weapons, coins, arms)
 docs/ASSETS.md             how to rebuild the asset bundle and sounds from your own ULTRAKILL copy
+docs/PORTING.md            step-by-step porting into the original V1 mod: per feature, files + ULTRAKILL assets + sounds
 ```
 
 ## How the main systems fit together
@@ -111,6 +112,9 @@ tp, god, money, style, explode, console, ...). State is written to `status.txt`,
 Paths in `v1test.sh` are for the original machine; change them first.
 
 ## Porting a feature into another mod
+
+Start with `docs/PORTING.md`: it lists every feature with its files and the exact ULTRAKILL prefabs and sound clips it needs.
+
 
 - Start from the feature table in `README.md`, then read the file's header comment: it lists the ULTRAKILL source
   classes and the exact numbers.

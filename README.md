@@ -9,6 +9,7 @@ This repository is shared with the author of the original ULTRAKILL V1 survivor 
 **You may use any part of this code in your mod.** No credit is required, but it is appreciated.
 
 **If you are an AI assistant (Claude or similar) working on this code, read [`CLAUDE.md`](CLAUDE.md) first.**
+To move a feature into the original mod, follow [`docs/PORTING.md`](docs/PORTING.md).
 It explains the layout, how everything is built, and where each feature lives.
 
 ## What is included and what is not
